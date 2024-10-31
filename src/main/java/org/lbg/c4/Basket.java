@@ -19,7 +19,7 @@ public class Basket
         itsItems.add( item );
     }
 
-    public double   getTotal()
+    public double getTotal()
     {
         double total = 0;
 
@@ -28,6 +28,10 @@ public class Basket
             total += item.getTotalPrice();
         }
         return total;
+    }
+
+    public Item getLastItem() {
+        return itsItems.get(itsItems.size() -1);
     }
 
 }
